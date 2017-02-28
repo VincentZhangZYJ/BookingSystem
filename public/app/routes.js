@@ -1,0 +1,67 @@
+/**
+ * Created by Yujian on 2017/2/4.
+ */
+angular.module('appRoutes',['ngRoute'])
+    .config(function($routeProvider,$locationProvider){
+        $routeProvider
+            .when('/',{
+                templateUrl:'app/views/pages/home.html'
+            })
+            .when('/about',{
+                templateUrl:'app/views/pages/about.html'
+            })
+            .when('/event',{
+                templateUrl:'app/views/pages/event.html'
+            })
+            .when('/menu',{
+                templateUrl:'app/views/pages/menu.html'
+            })
+            .when('/register',{
+                templateUrl:'app/views/pages/users/register.html',
+                controller:'regCtrl',
+                controllerAs:'register',
+                authenticated:false
+            })
+            .when('/login',{
+                templateUrl:'app/views/pages/users/login.html',
+                authenticated:false
+            })
+            .when('/logout',{
+                templateUrl:'app/views/pages/users/logout.html',
+                authenticated:true
+            })
+            .when('/profile',{
+                templateUrl:'app/views/pages/users/profile.html',
+                authenticated:true
+            })
+            .when('/contact',{
+                templateUrl:'app/views/pages/services/contact.html',
+                controller:'contactCtrl',
+                controllerAs:'contact'
+            })
+            .when('/review/:confirmCode',{
+                templateUrl:'app/views/pages/services/review.html',
+                controller:'reviewCtrl',
+                controllerAs:'review'
+            })
+            .when('/review',{
+                templateUrl:'app/views/pages/services/review.html',
+                controller:'reviewCtrl',
+                controllerAs:'review'
+            })
+            .when('/management', {
+                templateUrl: 'app/views/pages/management/management.html',
+                controller:'managementCtrl',
+                controllerAs:'management'
+            })
+            .when('/edit/:confirmCode',{
+                templateUrl: 'app/views/pages/management/edit.html',
+                controller:'editCtrl',
+                controllerAs:'edit'
+            })
+            .otherwise({redirectTo:'/'});
+        $locationProvider.html5Mode({
+            enabled:true,
+            requiredBase:false
+        });
+    });

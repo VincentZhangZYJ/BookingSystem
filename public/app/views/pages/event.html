@@ -1,0 +1,54 @@
+<!-- event -->
+<section id="event">
+    <div class="bg-color" class="section-padding">
+        <header id="header">
+            <div class="container">
+                <div id="mySidenav" class="sidenav">
+                    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                    <a href="/">Home</a>
+                    <a href="/about">About</a>
+                    <a href="/event">Event</a>
+                    <a href="/menu">Menu</a>
+                    <a href="/contact">Book a table</a>
+                    <a href="/review">Review</a>
+                    <a ng-show="!main.isLoggedIn" href="/login">Admin</a>
+                    <a ng-show="main.isLoggedIn" href="/register">Register</a>
+                    <a ng-show="main.isLoggedIn" href="/management">Manage</a>
+                    <a ng-show="main.isLoggedIn" ng-click="main.logout();" href="/logout">Logout</a>
+                </div>
+                <!-- Use any element to open the sidenav -->
+                <span onclick="openNav()" class="pull-right menu-icon">☰</span>
+            </div>
+        </header>
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12 text-center" style="padding:60px;">
+                    <h1 class="header-h">Up Coming events</h1>
+                    <p class="header-p">Decorations 100% complete here</p>
+                </div>
+                <div class="col-md-12" style="padding-bottom:60px;">
+                    <div class="item active left">
+                        <div class="col-md-6 col-sm-6 left-images">
+                            <img src="assets/img/res02.jpg" class="img-responsive">
+                        </div>
+                        <div class="col-md-6 col-sm-6 details-text">
+                            <div class="content-holder">
+                                <h2>Joyful party</h2>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore eos suscipit earum voluptas aliquam recusandae, quae iure adipisci, inventore quia, quos delectus quaerat praesentium id expedita nihil illo accusantium, tempora.</p>
+                                <address>
+                                    <strong>Place: </strong>
+                                    1612 Collins Str, Victoria 8007
+                                    <br>
+                                    <strong>Time: </strong>
+                                    07:30pm
+                                </address>
+                                <a class="btn btn-imfo btn-read-more" href="events-details.html">Read more</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--/ event -->

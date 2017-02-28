@@ -1,0 +1,90 @@
+<section id="contact" class="section-padding">
+    <header id="header">
+        <div class="container">
+            <div id="mySidenav" class="sidenav">
+                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                <a href="/">Home</a>
+                <a href="/about">About</a>
+                <a href="/event">Event</a>
+                <a href="/menu">Menu</a>
+                <a href="/contact">Book a table</a>
+                <a href="/review">Review</a>
+                <a ng-show="!main.isLoggedIn" href="/login">Admin</a>
+                <a ng-show="main.isLoggedIn" href="/register">Register</a>
+                <a ng-show="main.isLoggedIn" href="/management">Manage</a>
+                <a ng-show="main.isLoggedIn" ng-click="main.logout();" href="/logout">Logout</a>
+            </div>
+            <!-- Use any element to open the sidenav -->
+            <span onclick="openNav()" class="pull-right menu-icon">☰</span>
+        </div>
+    </header>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <h1 class="header-h">Save your changes</h1>
+
+            </div>
+        </div>
+        <div class="row msg-row">
+            <div class="col-md-8 col-sm-8">
+                <form class="contactForm" ng-submit="edit.updateContact(code,contact)">
+                    <div class="col-md-6 col-sm-6 contact-form pad-form">
+                        <div class="form-group label-floating is-empty">
+                            <input type="text" ng-model="edit.contact.name" name="name" class="form-control" id="name" placeholder="Your Name" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
+                            <div class="validation"></div>
+                        </div>
+
+                    </div>
+                    <div class="col-md-6 col-sm-6 contact-form">
+                        <div class="form-group">
+                            <input type="date"  class="form-control label-floating is-empty" name="date" id="date" placeholder="Date" data-rule="required" data-msg="This field is required" />
+                            <div class="validation"></div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-sm-6 contact-form pad-form">
+                        <div class="form-group">
+                            <input type="email" ng-model="edit.contact.email" class="form-control label-floating is-empty" name="email" id="email" placeholder="Your Email" data-rule="email" data-msg="Please enter a valid email" />
+                            <div class="validation"></div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-sm-6 contact-form">
+                        <div class="form-group">
+                            <input type="time"  class="form-control label-floating is-empty" name="time" id="time" placeholder="Time" data-rule="required" data-msg="This field is required" />
+                            <div class="validation"></div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-sm-6 contact-form">
+                        <div class="form-group">
+                            <input type="text" ng-model="edit.contact.phone" class="form-control label-floating is-empty" name="phone" id="phone" placeholder="Phone" data-rule="required" data-msg="This field is required" />
+                            <div class="validation"></div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-sm-6 contact-form">
+                        <div class="form-group">
+                            <input type="text" ng-model="edit.contact.people" class="form-control label-floating is-empty" name="people" id="people" placeholder="People" data-rule="required" data-msg="This field is required" />
+                            <div class="validation"></div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-sm-6 contact-form">
+                        <div class="form-group">
+                            <input type="text" ng-model="edit.contact.table" class="form-control label-floating is-empty" name="people" id="table" placeholder="Table" data-rule="required" data-msg="This field is required" />
+                            <div class="validation"></div>
+                        </div>
+                    </div>
+                    <div class="col-md-12 contact-form">
+                        <div class="form-group label-floating is-empty">
+                            <textarea class="form-control" ng-model="edit.contact.message" name="message" rows="5" rows="3" data-rule="required" data-msg="Please write something for us" placeholder="Message"></textarea>
+                            <div class="validation"></div>
+                        </div>
+
+                    </div>
+                    <div class="col-md-12 btnpad">
+                        <div class="contacts-btn-pad">
+                            <button type="submit" class="contacts-btn">Update</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>

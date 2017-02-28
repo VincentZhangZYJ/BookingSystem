@@ -1,0 +1,77 @@
+<!--<div class="page-header"><h1>User Login</h1></div>
+<form ng-submit="main.doLogin(loginData);">
+    <label>Username:</label>
+    <input class="form-control" type="text" name="username" placeholer="please enter username" ng-model="main.loginData.username">
+    <br>
+    <label>Password:</label>
+    <input class="form-control" type="password" name="password" placeholer="please enter password" ng-model="main.loginData.password">
+    <br>
+    <button class="btn btn-primary" type="submit">Login</button>
+</form>
+
+<br>-->
+
+<section id="contact" class="section-padding">
+    <header id="header">
+        <div class="container">
+            <div id="mySidenav" class="sidenav">
+                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                <a href="/">Home</a>
+                <a href="/about">About</a>
+                <a href="/event">Event</a>
+                <a href="/menu">Menu</a>
+                <a href="/contact">Book a table</a>
+                <a href="/review">Review</a>
+                <a ng-show="!main.isLoggedIn" href="/login">Admin</a>
+                <a ng-show="main.isLoggedIn" href="/register">Register</a>
+                <a ng-show="main.isLoggedIn" href="/management">Manage</a>
+                <a ng-show="main.isLoggedIn" ng-click="main.logout();" href="/logout">Logout</a>
+            </div>
+            <!-- Use any element to open the sidenav -->
+            <span onclick="openNav()" class="pull-right menu-icon">☰</span>
+        </div>
+    </header>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <h1 class="header-h">Admin Login</h1>
+
+            </div>
+        </div>
+            <div class="col-md-8 col-sm-8">
+                <form class="contactForm" ng-submit="main.doLogin(loginData);">
+                    <div class="col-md-6 col-sm-6 contact-form pad-form">
+                        <div class="form-group label-floating is-empty">
+                            <input type="text" ng-model="main.loginData.username" name="name" class="form-control" id="name" placeholder="please enter username" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
+                            <div class="validation"></div>
+                        </div>
+
+                    </div>
+                    <div class="col-md-6 col-sm-6 contact-form">
+                        <div class="form-group">
+                            <input type="password" ng-model="main.loginData.password" class="form-control label-floating is-empty" name="phone" id="phone" placeholder="please enter password" data-rule="required" data-msg="This field is required" />
+                            <div class="validation"></div>
+                        </div>
+                    </div>
+                    <div class="col-md-12 btnpad">
+                        <div class="contacts-btn-pad">
+                            <button type="submit" class="contacts-btn">login</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="jumbotron text-center" ng-show="main.load">
+        <span class="glyphicon glyphicon-repeat spinner"></span>
+        <p>Loading...</p>
+    </div>
+    <br>
+    <div class="row show-hide-message" ng-show="main.successMsg">
+        <div class="alert alert-success">{{main.successMsg}}</div>
+    </div>
+    <br>
+    <div class="row show-hide-message" ng-show="main.errorMsg">
+        <div class="alert alert-danger">{{main.errorMsg}}</div>
+    </div>
+</section>

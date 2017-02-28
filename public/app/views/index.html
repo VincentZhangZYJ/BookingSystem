@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <base href="/">
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/jumbotron.css">
+    <link rel="stylesheet" href="assets/css/animate.css">
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Satisfy|Bree+Serif|Candal|PT+Sans">
+    <link rel="stylesheet" type="text/css" href="assets/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-route.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-animate.js"></script>
+    <script src="app/app.js"></script>
+    <script src="app/routes.js"></script>
+    <script src="app/controllers/userCtrl.js"></script>
+    <script src="app/controllers/mainCtrl.js"></script>
+    <script src="app/controllers/contactCtrl.js"></script>
+    <script src="app/controllers/reviewCtrl.js"></script>
+    <script src="app/services/userServices.js"></script>
+    <script src="app/services/authServices.js"></script>
+    <script src="app/services/contactServices.js"></script>
+    <script src="app/controllers/managementCtrl.js"></script>
+</head>
+<body ng-app="userApp" ng-controller="mainCtrl as main">
+<!--<nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">Bootstrap theme</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="/">Home</a></li>
+                <li><a ng-show="main.isLoggedIn" href="/login">Login</a></li>
+                <li><a ng-show="!main.isLoggedIn" href="/register">Register</a></li>
+                <li><a ng-show="main.isLoggedIn" href="#" ng-click="main.logout();">Logout</a></li>
+                <li><a href="/management">Management</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">Action</a></li>
+                        <li><a href="#">Another action</a></li>
+                        <li><a href="#">Something else here</a></li>
+                        <li role="separator" class="divider"></li>
+                        <li class="dropdown-header">Nav header</li>
+                        <li><a href="#">Separated link</a></li>
+                        <li><a href="#">One more separated link</a></li>
+                    </ul>
+                </li>
+                <li><a ng-show="!main.isLoggedIn" href="/profile">Hello {{main.username}}</a></li>
+            </ul>
+        </div>&lt;!&ndash;/.nav-collapse &ndash;&gt;
+    </div>
+</nav>-->
+<div ng-view></div>
+<!--<div class="container theme-showcase" role="main">
+
+    &lt;!&ndash; Main jumbotron for a primary marketing message or call to action &ndash;&gt;
+    <div class="jumbotron">
+        <h1>Theme example</h1>
+        <p>This is a template showcasing the optional theme stylesheet included in Bootstrap. Use it as a starting point to create something more unique by building on or modifying it.</p>
+    </div>
+
+    <div ng-view></div>
+
+</div> &lt;!&ndash; /container &ndash;&gt;
+
+
+<h1>Hello from tony</h1>-->
+<!-- footer -->
+<footer class="footer text-center">
+    <div class="footer-top">
+        <div class="row">
+            <div class="col-md-offset-3 col-md-6 text-center">
+                <div class="widget">
+                    <h4 class="widget-title">Delicious</h4>
+                    <address>324 Ellte Road<br>Delhi, DL 110013</address>
+                    <div class="social-list">
+                        <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                        <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                    </div>
+                    <p class="copyright clear-float">
+                        © Delicious Theme. All Rights Reserved
+                    <div class="credits">
+                        <!--
+                            All the links in the footer should remain intact.
+                            You can delete the links only if you purchased the pro version.
+                            Licensing information: https://bootstrapmade.com/license/
+                            Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/buy/?theme=Delicious
+                        -->
+                        Designed by <a href="https://bootstrapmade.com/">Free Bootstrap Themes</a>
+                    </div>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+<!-- / footer -->
+<script src="assets/js/jquery.min.js"></script>
+<script src="assets/js/jquery.easing.min.js"></script>
+<script src="assets/js/bootstrap.min.js"></script>
+<script src="assets/js/jquery.mixitup.min.js"></script>
+<script src="assets/js/custom.js"></script>
+<script src="contactform/contactform.js"></script>
+</body>
+</html>
